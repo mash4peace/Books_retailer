@@ -1,0 +1,37 @@
+
+<!DOCTYPEHTML>
+<html>
+
+<body>
+<head>
+<title>
+Books Store
+</title>
+<center>
+<h1>Books Store</h1>
+</center>
+</head>
+<span>
+Welcome to Books store, your one stop shop for used Books.<br>
+    Please log-in or register if it's you are a first time user
+</span>
+<br>
+<br>
+<br>
+<br>
+{% if message%}
+	{{message}}
+	{% endif%}
+<form method="POST" action="/">
+      Username:<input type="text" name="username" id="username">
+	  <br>
+      Password:<input type="password" name="password" id="password">
+      <br>
+	  <input type="submit" name="submit" value="Submit">
+</form>
+<a href="/registration">Sign up</a>
+
+
+</body>
+</html>
+
