@@ -4,14 +4,13 @@ import jinja2
 import os
 
 
-app = Flask(__name__)
-#Global Variables
+app = Flask(__name__, static_url_path="/static" '/static', static_folder='static')
 
 
 @app.route('/', methods= ['GET', 'POST'])
 def hello_books():
     if 'username' in session:
-        books = {"Python for bigginers": "100", "Python for Dummies": "50"}
+        #books = {"Python for bigginers": "100", "Python for Dummies": "50"}
         return render_template("userHome.html")
     else:
         message = None
